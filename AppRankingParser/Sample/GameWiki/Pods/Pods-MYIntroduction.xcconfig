@@ -1,1 +1,0 @@
-PODS_MYINTRODUCTION_OTHER_LDFLAGS = -framework QuartzCore
