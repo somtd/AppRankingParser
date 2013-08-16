@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		296C93A4BC494029A434A31D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 621FA658E8F541FE9FF9023A /* libPods.a */; };
 		5A71D34B17BC433B00D8BC4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D33C17BC433B00D8BC4B /* AppDelegate.m */; };
 		5A71D34C17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A71D33D17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist */; };
 		5A71D34D17BC433B00D8BC4B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A71D34017BC433B00D8BC4B /* Default-568h@2x.png */; };
@@ -16,12 +17,15 @@
 		5A71D35117BC433B00D8BC4B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A71D34617BC433B00D8BC4B /* ViewController.xib */; };
 		5A71D35217BC433B00D8BC4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D34817BC433B00D8BC4B /* main.m */; };
 		5A71D35317BC433B00D8BC4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D34A17BC433B00D8BC4B /* ViewController.m */; };
+		5A71D37317BDC04100D8BC4B /* RankingApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D37217BDC04100D8BC4B /* RankingApiClient.m */; };
+		5A71D37617BDC12000D8BC4B /* RankingApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D37517BDC12000D8BC4B /* RankingApi.m */; };
 		5A9AD21F17B47E8200EE5535 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD21E17B47E8200EE5535 /* UIKit.framework */; };
 		5A9AD22117B47E8200EE5535 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD22017B47E8200EE5535 /* Foundation.framework */; };
 		5A9AD22317B47E8200EE5535 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD22217B47E8200EE5535 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ED1CB9CBBDD49B18B5419B9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		5A71D33B17BC433B00D8BC4B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A71D33C17BC433B00D8BC4B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A71D33D17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppRankingParserDemo-Info.plist"; sourceTree = "<group>"; };
@@ -34,10 +38,15 @@
 		5A71D34817BC433B00D8BC4B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5A71D34917BC433B00D8BC4B /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A71D34A17BC433B00D8BC4B /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5A71D37117BDC04100D8BC4B /* RankingApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingApiClient.h; sourceTree = "<group>"; };
+		5A71D37217BDC04100D8BC4B /* RankingApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingApiClient.m; sourceTree = "<group>"; };
+		5A71D37417BDC12000D8BC4B /* RankingApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingApi.h; sourceTree = "<group>"; };
+		5A71D37517BDC12000D8BC4B /* RankingApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingApi.m; sourceTree = "<group>"; };
 		5A9AD21B17B47E8200EE5535 /* AppRankingParserDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRankingParserDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AD21E17B47E8200EE5535 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A9AD22017B47E8200EE5535 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A9AD22217B47E8200EE5535 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		621FA658E8F541FE9FF9023A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +57,7 @@
 				5A9AD21F17B47E8200EE5535 /* UIKit.framework in Frameworks */,
 				5A9AD22117B47E8200EE5535 /* Foundation.framework in Frameworks */,
 				5A9AD22317B47E8200EE5535 /* CoreGraphics.framework in Frameworks */,
+				296C93A4BC494029A434A31D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +81,10 @@
 		5A71D33F17BC433B00D8BC4B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				5A71D37117BDC04100D8BC4B /* RankingApiClient.h */,
+				5A71D37217BDC04100D8BC4B /* RankingApiClient.m */,
+				5A71D37417BDC12000D8BC4B /* RankingApi.h */,
+				5A71D37517BDC12000D8BC4B /* RankingApi.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -111,6 +125,7 @@
 				5A71D33A17BC42F100D8BC4B /* AppRankingParserDemo */,
 				5A9AD21D17B47E8200EE5535 /* Frameworks */,
 				5A9AD21C17B47E8200EE5535 /* Products */,
+				0ED1CB9CBBDD49B18B5419B9 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +143,7 @@
 				5A9AD21E17B47E8200EE5535 /* UIKit.framework */,
 				5A9AD22017B47E8200EE5535 /* Foundation.framework */,
 				5A9AD22217B47E8200EE5535 /* CoreGraphics.framework */,
+				621FA658E8F541FE9FF9023A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,9 +155,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9AD23E17B47E8200EE5535 /* Build configuration list for PBXNativeTarget "AppRankingParserDemo" */;
 			buildPhases = (
+				75D07323F7EF46FFA4AF648E /* Check Pods Manifest.lock */,
 				5A9AD21717B47E8200EE5535 /* Sources */,
 				5A9AD21817B47E8200EE5535 /* Frameworks */,
 				5A9AD21917B47E8200EE5535 /* Resources */,
+				49F5E20D486D47939A14C7C0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +212,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		49F5E20D486D47939A14C7C0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75D07323F7EF46FFA4AF648E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A9AD21717B47E8200EE5535 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +253,8 @@
 				5A71D34B17BC433B00D8BC4B /* AppDelegate.m in Sources */,
 				5A71D35217BC433B00D8BC4B /* main.m in Sources */,
 				5A71D35317BC433B00D8BC4B /* ViewController.m in Sources */,
+				5A71D37317BDC04100D8BC4B /* RankingApiClient.m in Sources */,
+				5A71D37617BDC12000D8BC4B /* RankingApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +338,7 @@
 		};
 		5A9AD23F17B47E8200EE5535 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED1CB9CBBDD49B18B5419B9 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppRankingParserDemo-Prefix.pch";
@@ -296,6 +350,7 @@
 		};
 		5A9AD24017B47E8200EE5535 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED1CB9CBBDD49B18B5419B9 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppRankingParserDemo-Prefix.pch";
