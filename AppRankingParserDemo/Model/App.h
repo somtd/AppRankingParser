@@ -1,6 +1,5 @@
 //
 //  App.h
-//  GameWiki
 //
 //  Created by SOMTD on 2013/08/08.
 //  Copyright (c) 2013年 SOMTD. All rights reserved.
@@ -106,6 +105,7 @@
 
 @interface App : NSObject
 
+@property (nonatomic, copy) NSString *appId;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *artist;
 @property (nonatomic, copy) NSString *title;

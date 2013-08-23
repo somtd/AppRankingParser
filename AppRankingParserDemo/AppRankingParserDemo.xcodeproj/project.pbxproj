@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		296C93A4BC494029A434A31D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 621FA658E8F541FE9FF9023A /* libPods.a */; };
+		5A6E6F8317C6F59F004F5CCC /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E6F8217C6F59F004F5CCC /* App.m */; };
 		5A71D34B17BC433B00D8BC4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A71D33C17BC433B00D8BC4B /* AppDelegate.m */; };
 		5A71D34C17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A71D33D17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist */; };
 		5A71D34D17BC433B00D8BC4B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A71D34017BC433B00D8BC4B /* Default-568h@2x.png */; };
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		0ED1CB9CBBDD49B18B5419B9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		5A6E6F8117C6F59F004F5CCC /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		5A6E6F8217C6F59F004F5CCC /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		5A71D33B17BC433B00D8BC4B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5A71D33C17BC433B00D8BC4B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A71D33D17BC433B00D8BC4B /* AppRankingParserDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AppRankingParserDemo-Info.plist"; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 		5A71D35517BC43F700D8BC4B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5A6E6F8117C6F59F004F5CCC /* App.h */,
+				5A6E6F8217C6F59F004F5CCC /* App.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				5A71D35317BC433B00D8BC4B /* ViewController.m in Sources */,
 				5A71D37317BDC04100D8BC4B /* RankingApiClient.m in Sources */,
 				5A71D37617BDC12000D8BC4B /* RankingApi.m in Sources */,
+				5A6E6F8317C6F59F004F5CCC /* App.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
