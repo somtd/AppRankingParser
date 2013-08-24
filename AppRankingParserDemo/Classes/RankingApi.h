@@ -84,12 +84,11 @@ typedef enum ARMusicVideos : NSUInteger {
     ARMusicVideosTypeTopVideos,
 } ARMusicVideos;
 
+
 //Genre
-typedef enum ARGenre : NSUInteger {
-    
-    ARGenreTypeAll = 0,
-    //Audiobooks
-    AudiobooksArtsEntertaiment = 50000041,
+//Audiobooks Genre
+typedef enum ARAudiobooksGenre : NSUInteger {
+    AudiobooksArtsEntertaiment  = 50000041,
     AudiobooksAudiobooksLatino = 50000070,
     AudiobooksBiographyMemoir  = 50000042,
     AudiobooksBusiness         = 50000043,
@@ -110,11 +109,14 @@ typedef enum ARGenre : NSUInteger {
     AudiobooksSelfDevelopment  = 50000056,
     AudiobooksProgramsPerformance = 75,
     AudiobooksSpeakerStorytellers = 50000048,
-    AudiobooksSports           = 50000057,
-    AudiobooksTechnology       = 50000058,
+    AudiobooksSports              = 50000057,
+    AudiobooksTechnology          = 50000058,
     AudiobooksTravelAdventure  = 50000059,
     
-    //iOS Apps
+} ARAudiobooksGenre;
+
+//iOS Apps Genre
+typedef enum ARiOSAppsGenre : NSUInteger {
     iOSAppsBooks               = 6018,
     iOSAppsBusiness            = 6000,
     iOSAppsCatalogs            = 6022,
@@ -139,7 +141,10 @@ typedef enum ARGenre : NSUInteger {
     iOSAppsUtilities           = 6002,
     iOSAppsWeather             = 6001,
     
-    //Movies
+} ARiOSAppsGenre;
+
+//Movies Genre
+typedef enum ARMoviesGenre : NSUInteger {
     MoviesActionAdventure      = 4401,
     MoviesAfrican              = 4434,
     MoviesAnime                = 4402,
@@ -174,7 +179,10 @@ typedef enum ARGenre : NSUInteger {
     MoviesUrban                = 4419,
     MoviesWestern              = 4418,
     
-    //Music
+} ARMoviesGenre;
+
+//Music Genre
+typedef enum ARMusicGenre : NSUInteger {
     MusicAlternative           = 20,
     MusicAnime                 = 29,
     MusicBlues                 = 2,
@@ -216,8 +224,11 @@ typedef enum ARGenre : NSUInteger {
     MusicSpokenWord            = 50000061,
     MusicVocal                 = 23,
     MusicWorld                 = 19,
-    
-    //Mac Apps
+
+} ARMusicGenre;
+
+//Mac Apps Genre
+typedef enum ARMacAppsGenre : NSUInteger {
     MacAppsBusiness            =12001,
     MacAppsDeveloperTools      =12002,
     MacAppsEducation           =12003,
@@ -239,8 +250,10 @@ typedef enum ARGenre : NSUInteger {
     MacAppsUtilities           =12019,
     MacAppsVideo               =12020,
     MacAppsWeather             =12021,
-    
-    //Podcasts
+} ARMacAppsGenre;
+
+//Podcasts Genre
+typedef enum ARPodcastsGenre : NSUInteger {
     PodcastsArts               =1301,
     PodcastsBusiness           =1321,
     PodcastsComedy             =1303,
@@ -257,8 +270,11 @@ typedef enum ARGenre : NSUInteger {
     PodcastsSportsRecreation   =1316,
     PodcastsTVFilm             =1309,
     PodcastsTechnology         =1318,
-    
-    //Books
+
+} ARPodcastsGenre;
+
+//Books Genre
+typedef enum ARBooksGenre : NSUInteger {
     BooksArtsEntertainment     = 9007,
     BooksBiographiesMemoirs    = 9008,
     BooksBusinessPersonalFinance= 9009,
@@ -284,7 +300,10 @@ typedef enum ARGenre : NSUInteger {
     BooksSportsOutdoors        = 9035,
     BooksTravelAdventure       = 9004,
     
-    //iTunes U
+} ARBooksGenre;
+
+//iTunesU Genre
+typedef enum ARiTunesUGenre : NSUInteger {
     iTunesUArtsArchitecture    = 40000016,
     iTunesUBusiness            = 40000001,
     iTunesUCommunicationsMedia = 40000053,
@@ -301,8 +320,11 @@ typedef enum ARGenre : NSUInteger {
     iTunesUScience             = 40000084,
     iTunesUSociety             = 40000101,
     iTunesUTechnologyLearning  = 40000109,
+    
+} ARiTunesUGenre;
 
-    //TV Shows
+//TV Shows Genre
+typedef enum ARTVShowsGenre : NSUInteger {
     TVShowsActionAdventure     = 4003,
     TVShowsAnimation           = 4002,
     TVShowsClassic             = 4004,
@@ -315,8 +337,11 @@ typedef enum ARGenre : NSUInteger {
     TVShowsSciFiFantasy        = 4008,
     TVShowsSports              = 4009,
     TVShowsTeens               = 4010,
-    
-    //Music Videos
+
+} ARTVShowsGenre;
+
+//Music Videos Genre
+typedef enum ARMusicVideosGenre : NSUInteger {
     MusicVideosAlternative     = 1620,
     MusicVideosAnime           = 1629,
     MusicVideosBigBand         = 1685,
@@ -361,10 +386,67 @@ typedef enum ARGenre : NSUInteger {
     MusicVideosVocal           = 1623,
     MusicVideosWorld           = 1619,
     
-} ARGenre;
+} ARMusicVideosGenre;
 
 @interface RankingApi : NSObject
 
++ (void)getAudiobooksRankingWithCountry:(ARCountry)country
+                               feedType:(ARAudiobooks)feedType
+                                  genre:(ARAudiobooksGenre)genre
+                                  limit:(int)limit
+                                handler:(void (^)(id response, NSError *error))handler;
 
++ (void)getiOSAppsRankingWithCountry:(ARCountry)country
+                            feedType:(ARiOSApps)feedType
+                               genre:(ARiOSAppsGenre)genre
+                               limit:(int)limit
+                             handler:(void (^)(id response, NSError *error))handler;
 
++ (void)getMoviesRankingWithCountry:(ARCountry)country
+                           feedType:(ARMovies)feedType
+                              genre:(ARMoviesGenre)genre
+                              limit:(int)limit
+                            handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getMusicRankingWithCountry:(ARCountry)country
+                          feedType:(ARMusic)feedType
+                             genre:(ARMusicGenre)genre
+                             limit:(int)limit
+                           handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getMacAppsRankingWithCountry:(ARCountry)country
+                            feedType:(ARMacApps)feedType
+                               genre:(ARMacAppsGenre)genre
+                               limit:(int)limit
+                             handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getPodcastsRankingWithCountry:(ARCountry)country
+                             feedType:(ARPodcasts)feedType
+                                genre:(ARPodcastsGenre)genre
+                                limit:(int)limit
+                              handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getBooksRankingWithCountry:(ARCountry)country
+                          feedType:(ARBooks)feedType
+                             genre:(ARBooksGenre)genre
+                             limit:(int)limit
+                           handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getiTunesURankingWithCountry:(ARCountry)country
+                            feedType:(ARiTunesU)feedType
+                               genre:(ARiTunesUGenre)genre
+                               limit:(int)limit
+                             handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getTVShowsRankingWithCountry:(ARCountry)country
+                            feedType:(ARTVShows)feedType
+                               genre:(ARTVShowsGenre)genre
+                               limit:(int)limit
+                             handler:(void (^)(id response, NSError *error))handler;
+
++ (void)getMusicVideosRankingWithCountry:(ARCountry)country
+                                feedType:(ARMusicVideos)feedType
+                                   genre:(ARMusicVideosGenre)genre
+                                   limit:(int)limit
+                                 handler:(void (^)(id response, NSError *error))handler;
 @end

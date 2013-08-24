@@ -14,7 +14,7 @@
 
 + (void)getAudiobooksRankingWithCountry:(ARCountry)country
                                feedType:(ARAudiobooks)feedType
-                                  genre:(ARGenre)genre
+                                  genre:(ARAudiobooksGenre)genre
                                   limit:(int)limit
                                 handler:(void (^)(id response, NSError *error))handler
 {
@@ -26,7 +26,8 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *countryParam = [self _country:country];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -42,10 +43,11 @@
 
 + (void)getiOSAppsRankingWithCountry:(ARCountry)country
                             feedType:(ARiOSApps)feedType
-                               genre:(ARGenre)genre
+                               genre:(ARiOSAppsGenre)genre
                                limit:(int)limit
                              handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARiOSAppsTypeTopFree:
@@ -78,7 +80,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -94,10 +96,11 @@
 
 + (void)getMoviesRankingWithCountry:(ARCountry)country
                            feedType:(ARMovies)feedType
-                              genre:(ARGenre)genre
+                              genre:(ARMoviesGenre)genre
                               limit:(int)limit
                             handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARMoviesTypeTop:
@@ -109,7 +112,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -125,10 +128,11 @@
 
 + (void)getMusicRankingWithCountry:(ARCountry)country
                           feedType:(ARMusic)feedType
-                             genre:(ARGenre)genre
+                             genre:(ARMusicGenre)genre
                              limit:(int)limit
                            handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARMusicTypeTopAlbums:
@@ -143,7 +147,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -159,10 +163,11 @@
 
 + (void)getMacAppsRankingWithCountry:(ARCountry)country
                             feedType:(ARMacApps)feedType
-                               genre:(ARGenre)genre
+                               genre:(ARMacAppsGenre)genre
                                limit:(int)limit
                            handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARMacAppsTypeTop:
@@ -180,7 +185,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -196,10 +201,11 @@
 
 + (void)getPodcastsRankingWithCountry:(ARCountry)country
                              feedType:(ARPodcasts)feedType
-                                genre:(ARGenre)genre
+                                genre:(ARPodcastsGenre)genre
                                 limit:(int)limit
                               handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARPodcastsTypeTop:
@@ -208,7 +214,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -224,10 +230,11 @@
 
 + (void)getBooksRankingWithCountry:(ARCountry)country
                           feedType:(ARBooks)feedType
-                             genre:(ARGenre)genre
+                             genre:(ARBooksGenre)genre
                              limit:(int)limit
                            handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARBooksTypeTopPaid:
@@ -239,7 +246,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -255,10 +262,11 @@
 
 + (void)getiTunesURankingWithCountry:(ARCountry)country
                             feedType:(ARiTunesU)feedType
-                               genre:(ARGenre)genre
+                               genre:(ARiTunesUGenre)genre
                                limit:(int)limit
                              handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARiTunesUTypeTopCollections:
@@ -270,7 +278,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -286,10 +294,11 @@
 
 + (void)getTVShowsRankingWithCountry:(ARCountry)country
                             feedType:(ARTVShows)feedType
-                               genre:(ARGenre)genre
+                               genre:(ARTVShowsGenre)genre
                                limit:(int)limit
                              handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARTVShowsTypeTopTVEpisodes:
@@ -301,7 +310,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -317,10 +326,11 @@
 
 + (void)getMusicVideosRankingWithCountry:(ARCountry)country
                                 feedType:(ARMusicVideos)feedType
-                                   genre:(ARGenre)genre
+                                   genre:(ARMusicVideosGenre)genre
                                    limit:(int)limit
                                  handler:(void (^)(id response, NSError *error))handler
 {
+    NSString *countryParam = [self _country:country];
     NSString *feedTypeParam;
     switch (feedType) {
         case ARMusicVideosTypeTopVideos:
@@ -329,7 +339,7 @@
         default:
             break;
     }
-    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",country,feedTypeParam,limit,genre];
+    NSString *path = [NSString stringWithFormat:@"%@/rss/%@/limit=%d/genre=%d/json",countryParam,feedTypeParam,limit,genre];
     [[RankingApiClient sharedInstance] getPath:path
                                     parameters:nil
                                        success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -341,6 +351,19 @@
                                        failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                            handler(nil,error);
                                        }];
+}
+
++ (NSString *)_country:(ARCountry)country {
+    switch (country) {
+        case Japan:
+            return @"ja";
+            break;
+        case UnitedStates:
+            return @"us";
+            break;
+        default:
+            break;
+    }
 }
 
 @end
