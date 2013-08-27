@@ -356,7 +356,7 @@
 + (NSString *)_country:(ARCountry)country {
     switch (country) {
         case Japan:
-            return @"ja";
+            return @"jp";
             break;
         case UnitedStates:
             return @"us";

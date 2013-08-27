@@ -12,7 +12,7 @@
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     
     self = [super init];
-    if (self) {        
+    if (self) {
         self.appId        = dictionary[@"id"][@"attributes"][@"im:id"];
         self.name         = dictionary[@"im:name"][@"label"];
         self.artist       = dictionary[@"im:artist"][@"label"];
@@ -24,5 +24,4 @@
     }
     return self;
 }
-
 @end
