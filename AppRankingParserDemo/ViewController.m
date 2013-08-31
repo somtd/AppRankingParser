@@ -19,14 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.rankingView.delegate   = self;
-//    self.rankingView.dataSource = self;
-    _array = [[NSMutableArray alloc]init];
-        
-//    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-//    [refreshControl setTintColor:[UIColor orangeColor]];
-//    [refreshControl addTarget:self action:@selector(needRefresh:) forControlEvents:UIControlEventValueChanged];
-//    [self.rankingView addSubview:refreshControl];
+    _array = [[NSMutableArray alloc]init];        
 }
 
 - (void)viewDidAppear:(BOOL)animated
