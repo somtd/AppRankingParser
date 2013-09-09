@@ -23,6 +23,8 @@
 		5A9AD21F17B47E8200EE5535 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD21E17B47E8200EE5535 /* UIKit.framework */; };
 		5A9AD22117B47E8200EE5535 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD22017B47E8200EE5535 /* Foundation.framework */; };
 		5A9AD22317B47E8200EE5535 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AD22217B47E8200EE5535 /* CoreGraphics.framework */; };
+		5ABF157017DCC30500CB4C6D /* FeedTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF156F17DCC30500CB4C6D /* FeedTypeViewController.m */; };
+		5ABF157317DD696800CB4C6D /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABF157217DD696800CB4C6D /* RankingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,10 @@
 		5A9AD21E17B47E8200EE5535 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5A9AD22017B47E8200EE5535 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5A9AD22217B47E8200EE5535 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5ABF156E17DCC30500CB4C6D /* FeedTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTypeViewController.h; sourceTree = "<group>"; };
+		5ABF156F17DCC30500CB4C6D /* FeedTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTypeViewController.m; sourceTree = "<group>"; };
+		5ABF157117DD696800CB4C6D /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		5ABF157217DD696800CB4C6D /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		621FA658E8F541FE9FF9023A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,10 @@
 				5A71D33B17BC433B00D8BC4B /* AppDelegate.h */,
 				5A71D33C17BC433B00D8BC4B /* AppDelegate.m */,
 				5A71D33F17BC433B00D8BC4B /* Classes */,
+				5ABF156E17DCC30500CB4C6D /* FeedTypeViewController.h */,
+				5ABF156F17DCC30500CB4C6D /* FeedTypeViewController.m */,
+				5ABF157117DD696800CB4C6D /* RankingViewController.h */,
+				5ABF157217DD696800CB4C6D /* RankingViewController.m */,
 			);
 			name = AppRankingParserDemo;
 			sourceTree = "<group>";
@@ -261,6 +271,8 @@
 				5A71D37317BDC04100D8BC4B /* RankingApiClient.m in Sources */,
 				5A71D37617BDC12000D8BC4B /* RankingApi.m in Sources */,
 				5A6E6F8317C6F59F004F5CCC /* App.m in Sources */,
+				5ABF157017DCC30500CB4C6D /* FeedTypeViewController.m in Sources */,
+				5ABF157317DD696800CB4C6D /* RankingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

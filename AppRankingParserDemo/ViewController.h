@@ -11,6 +11,6 @@
 @interface ViewController : UIViewController
 <UITableViewDataSource,UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *rankingView;
+@property (weak, nonatomic) IBOutlet UITableView *categoryView;
 
 @end

@@ -7,11 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "FeedTypeViewController.h"
 #import "RankingApi.h"
 #import "App.h"
 
 @interface ViewController ()
-@property (nonatomic, copy) NSMutableArray  *array;
+@property (nonatomic, copy) NSArray  *categories;
 @end
 
 @implementation ViewController
@@ -19,45 +20,41 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _array = [[NSMutableArray alloc]init];        
+    self.navigationItem.title = @"Category";
+    
+    _categories = @[@"Audiobooks",
+                   @"iOS Apps",
+                   @"Movies",
+                   @"Music",
+                   @"Mac Apps",
+                   @"Podcasts",
+                   @"Books",
+                   @"iTunesU",
+                   @"TV Shows",
+                   @"Music Videos",
+                   ];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [RankingApi getiOSAppsRankingWithCountry:Japan
-                                    feedType:ARiOSAppsTypeTopGross
-                                       genre:iOSAppsGames
-                                       limit:20
-                                     handler:^(id response, NSError *error) {
-                                         _array = [NSMutableArray arrayWithCapacity:0];
-                                         NSLog(@"response:%@",response);
-                                         for (NSDictionary *appDictionary in (NSArray *)response) {
-                                             App *app = [[App alloc] initWithDictionary:appDictionary];
-                                             [_array addObject:app];
-                                         }
-                                         [self.rankingView reloadData];
-                                     }];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _array.count;
+    return _categories.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,11 +63,9 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    App *app = [_array objectAtIndex:indexPath.row];
-    cell.textLabel.text = app.name;
-    cell.detailTextLabel.text = app.artist;
+    cell.textLabel.text = _categories[indexPath.row];
     return cell;
 }
 
@@ -79,7 +74,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    FeedTypeViewController *feedType = [[FeedTypeViewController alloc]initWithStyle:UITableViewStylePlain];
+    feedType.category = _categories[indexPath.row];
+    [self.navigationController pushViewController:feedType animated:YES];    
 }
 
 
